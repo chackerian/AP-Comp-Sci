@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class first {
+public static void main(String args[]){
+	initialize();
+}
+
+public static void initialize(){	
+	// Student Array
+	String studentNames [] = new String[5];
+
+	// Student IDs
+	int studentId [] = new int[5];
+
+	// Student Emails
+	String studentEmail [] = new String[5];
+
+	
+	Scanner scan = new Scanner(System.in);
+	System.out.println("Enter 5 student names, enter delimits each different name");
+	for ( int i=0; i<5; i++){	
+		studentNames[i] = scan.nextLine();
+	}
+	
+}
+
+}

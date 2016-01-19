@@ -1,0 +1,59 @@
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class first {
+	public static void main(String args[]) {
+		initialize();
+		print();
+	}
+
+	public static int generateRand(int min, int max) {
+		int rand = min + (int) (Math.random() * max);
+		return rand;
+	}
+	
+	// Student Array
+	public static String studentNames[] = new String[5];
+
+	// Student IDs
+	public static int studentId[] = new int[5];
+
+	// Student Emails
+	public static String studentEmail[] = new String[5];
+
+
+	public static void initialize() {
+		
+		System.out.println("Enter 5 student names, enter delimits each different name");
+		for (int i = 0; i < 5; i++) {
+			
+			Scanner scan = new Scanner(System.in);
+			String next = scan.nextLine();
+
+			studentNames[i] = next;
+			studentId[i] = generateRand(111111, 999999);
+
+			String nameSplit[] = next.split(" ", 2);
+			studentEmail[i] = nameSplit[0] + "." + nameSplit[1] + "@stjlabs.com";
+
+		}
+
+	}
+	
+	public static void readFile( String filename){
+		try {
+		FileReader read = new FileReader(filename);	
+		
+		BufferedReader readBuffer  = new BufferedReader(readBuffer);
+		
+		}
+	}
+	
+
+	public static void print() {
+		for (int i = 0; i < 5; i++) {
+			System.out.println(studentNames[i] + "\t\t\t\t" + studentId[i] + "\t\t\t\t" + studentEmail[i]);
+
+		}
+	}
+}

@@ -1,0 +1,39 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class first {
+public static void main(String args[]){
+	//initialize();
+	for(int i=0;i<10;i++){
+		generateRand(111111,888888);
+	}
+}
+
+public static int generateRand(int min, int max){
+	int rand = min + (int)(Math.random()*max);
+	System.out.println(rand);
+	return rand;
+}
+
+public static void initialize(){	
+	// Student Array
+	String studentNames [] = new String[5];
+
+	// Student IDs
+	int studentId [] = new int[5];
+
+	// Student Emails
+	String studentEmail [] = new String[5];
+
+	int min = 111111;
+	int max = 999999;
+	
+	Scanner scan = new Scanner(System.in);
+	System.out.println("Enter 5 student names, enter delimits each different name");
+	for ( int i=0; i<5; i++){	
+		studentNames[i] = scan.nextLine();
+	}
+	
+}
+
+}
